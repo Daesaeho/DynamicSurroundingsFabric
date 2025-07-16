@@ -1,12 +1,11 @@
 {
-  "replace": false,
   "values": [
     {
-      "id": "#c:is_temperate",
+      "id": "#minecraft:swords",
       "required": false
     },
     {
-      "id": "#c:is_temperate/overworld",
+      "id": "#c:swords",
       "required": false
     }
   ]

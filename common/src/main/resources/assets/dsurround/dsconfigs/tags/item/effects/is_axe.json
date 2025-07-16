@@ -1,20 +1,19 @@
 {
-  "replace": false,
   "values": [
     {
-      "id": "#c:is_wet",
+      "id": "#minecraft:axes",
       "required": false
     },
     {
-      "id": "#c:is_wet/overworld",
+      "id": "#c:axes",
       "required": false
     },
     {
-      "id": "#forge:is_wet",
+      "id": "#c:tools/mining_tools",
       "required": false
     },
     {
-      "id": "#forge:is_wet/overworld",
+      "id": "#c:tools/mining_tool",
       "required": false
     }
   ]

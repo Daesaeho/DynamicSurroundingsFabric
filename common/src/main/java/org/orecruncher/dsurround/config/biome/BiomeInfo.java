@@ -74,8 +74,8 @@ public final class BiomeInfo implements Comparable<BiomeInfo>, IBiomeSoundProvid
         this.traits = traits;
         this.isRiver = this.traits.contains(BiomeTrait.RIVER);
         this.isOcean = this.traits.contains(BiomeTrait.OCEAN);
-        this.isDeepOcean = this.isOcean && this.traits.contains(BiomeTrait.DEEP);
-        this.isCave = this.traits.contains(BiomeTrait.CAVES);
+        this.isDeepOcean = this.traits.contains(BiomeTrait.DEEP_OCEAN);
+        this.isCave = this.traits.contains(BiomeTrait.CAVE);
 
         this.fogDensity = FogDensity.NONE;
 
@@ -155,6 +155,8 @@ public final class BiomeInfo implements Comparable<BiomeInfo>, IBiomeSoundProvid
     }
 
     public void mergeTraits(BiomeConfigRule configRule) {
+        if (configRule.clearTraits())
+            this.traits.clearTraits();
         this.traits.mergeTraits(configRule.traits());
         configRule.comment().ifPresent(this::addComment);
     }
@@ -211,6 +213,14 @@ public final class BiomeInfo implements Comparable<BiomeInfo>, IBiomeSoundProvid
     }
 
     public void update(final BiomeConfigRule entry) {
+
+        // If configured, reset the fog color. This will only reset the
+        // Dynamic Surrounding fog color - the underlying fog color from
+        // data packs will still apply.
+        if (entry.resetFogColor()) {
+            addComment("> Reset Fog");
+            this.setFogColor(null);
+        }
 
         entry.comment().ifPresent(this::addComment);
         entry.fogColor().ifPresent(this::setFogColor);

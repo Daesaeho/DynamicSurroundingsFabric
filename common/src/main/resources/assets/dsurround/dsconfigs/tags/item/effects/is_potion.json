@@ -1,12 +1,11 @@
 {
-  "replace": false,
   "values": [
     {
-      "id": "#c:is_the_end",
+      "id": "#c:potions",
       "required": false
     },
     {
-      "id": "#c:is_end",
+      "id": "#c:potions/bottle",
       "required": false
     }
   ]
