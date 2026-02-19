@@ -19,13 +19,13 @@ I expect this trend to continue.
 
 The mod is 100% client side. You can add to any mod pack, whether you play standalone or multiplayer.
 
-NeoForge is supported, in addition to Fabric, with versions 1.21.1+.
+NeoForge is supported, in addition to Fabric, with versions 1.21.11+.
 
 Online documentation: https://dynamic-surroundings.readthedocs.io/en/latest/index.html. This documentation is comprehensive and covers settings for players as well as modpack/resource pack authors.
 
 Documentation repository: https://github.com/OreCruncher/DynamicSurroundingsDocs
 
-### Minecraft 1.21.1 Requirements
+### Minecraft 1.21.11 Requirements
 * JAVA 21+
 * Architectury 13.0.8+
 
@@ -78,7 +78,7 @@ Documentation repository: https://github.com/OreCruncher/DynamicSurroundingsDocs
 
 ## FAQ 
 * Will there be updates for the Forge loaders?
-  * Not until Architectury has support for Forge 1.21.1+
+  * Not until Architectury has support for Forge 1.21.11+
 
 ## What's Being Dropped
 * Aurora.  Good at turning a computer into a space heater, and I do not know enough about shaders to improve.
